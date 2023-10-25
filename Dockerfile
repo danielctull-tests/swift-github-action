@@ -7,4 +7,4 @@ COPY main.swift /main.swift
 # Code file to execute when the docker container starts up
 ENTRYPOINT ["swift"]
 
-CMD ["main.swift"]
+CMD ["/main.swift"]
