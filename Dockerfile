@@ -1,7 +1,7 @@
 FROM swift:5.9
 
 COPY . /.
-RUN build
+RUN swift build
 
 ENTRYPOINT swift
 CMD run
