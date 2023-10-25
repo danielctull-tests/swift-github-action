@@ -1,10 +1,6 @@
 FROM swift:5.9
 
 COPY . /package
-RUN cd package
-RUN ls
-RUN swift --version
-RUN swift build
+RUN cd package & swift build
 
-ENTRYPOINT swift
-CMD run
+CMD cd package & swift run
