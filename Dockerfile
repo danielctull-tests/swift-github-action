@@ -5,6 +5,6 @@ FROM swift:5.9
 COPY main.swift /main.swift
 
 # Code file to execute when the docker container starts up
-# ENTRYPOINT ["./main.swift"]
+ENTRYPOINT ["/usr/bin/env swift"]
 
-CMD ["swift /main.swift"]
+CMD ["main.swift"]
