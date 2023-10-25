@@ -8,3 +8,5 @@ jobs:
       - name: Hello world action step
         id: hello
         uses: danielctull-tests/swift-github-action@main
+        with:
+          name: 'Mona the Octocat'
