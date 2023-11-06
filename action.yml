@@ -4,7 +4,7 @@ inputs:
   swift-subcommand:
     description: 'Swift subcommand to run'
     required: true
-    default: 'build'
+    default: '--version'
 runs:
   using: 'docker'
   image: 'Dockerfile'
