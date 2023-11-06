@@ -3,21 +3,17 @@ on: [push]
 jobs:
   hello_world_job:
     runs-on: ubuntu-latest
+    container:
+      image: swift:5.9
     name: A job to say hello
     steps:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Swift Version
-        uses: ./
+        run: swift --version
       - name: Swift Build
-        uses: ./
-        with:
-          swift-command: 'build'
+        run: swift build
       - name: Swift Test
-        uses: ./
-        with:
-          swift-command: 'test'
+        run: swift test
       - name: Swift Run
-        uses: ./
-        with:
-          swift-command: 'run'
+        run: swift run
