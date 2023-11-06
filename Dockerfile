@@ -1,3 +1,2 @@
 FROM swift:5.9
-COPY . /package
-CMD cd /package && swift run
+ENTRYPOINT [ "#!/usr/bin/env swift" ]
