@@ -1,12 +1,12 @@
 name: 'Hello World'
 description: 'Run swift command.'
 inputs:
-  swift-subcommand:
-    description: 'Swift subcommand to run'
+  swift-command:
+    description: 'Swift command to run'
     required: true
     default: '--version'
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.swift-subcommand }}
+    - ${{ inputs.swift-command }}
