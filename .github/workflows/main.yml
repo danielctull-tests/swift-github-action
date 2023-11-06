@@ -13,6 +13,10 @@ jobs:
         uses: ./
         with:
           swift-command: 'build'
+      - name: Swift Test
+        uses: ./
+        with:
+          swift-command: 'test'
       - name: Swift Run
         uses: ./
         with:
