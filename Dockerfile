@@ -1,5 +1,4 @@
 FROM swift:5.9
-WORKDIR /package
+WORKDIR /workdir
 COPY . ./
-RUN swift package fetch --enable-prefetching
 ENTRYPOINT ["swift"]
